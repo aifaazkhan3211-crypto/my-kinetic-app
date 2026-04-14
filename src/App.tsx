@@ -61,7 +61,8 @@ import {
   generateAudio, 
   chatWithDesigner,
   optimizeScript,
-  decomposeScript
+  decomposeScript,
+  type Scene
 } from "@/services/gemini";
 
 export default function App() {
@@ -73,7 +74,7 @@ export default function App() {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
-  const [scenes, setScenes] = useState<any[]>([]);
+  const [scenes, setScenes] = useState<Scene[]>([]);
   const [isDecomposing, setIsDecomposing] = useState(false);
   const [chatMessages, setChatMessages] = useState<{role: string, text: string}[]>([]);
   const [currentMessage, setCurrentMessage] = useState("");
